@@ -1,6 +1,7 @@
 let form= document.getElementById("registerForm");
 
 form.addEventListener("submit",async function(event){
+    event.preventDefault();
 
     let name=  document.getElementById("name").value;
     let email= document.getElementById("email").value;
@@ -27,10 +28,10 @@ form.addEventListener("submit",async function(event){
             const data = await response.json();
             alert(data.message);
             if(data.status){
-                window.location.href="dashboard.html"
+                window.location.href="dashboard.php"
             }
     }catch(error){
-        alert("sotihin wrong"+error);
+        alert("somthing wrong "+error);
     }
 
 });

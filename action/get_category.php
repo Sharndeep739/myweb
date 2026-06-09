@@ -5,7 +5,14 @@ include 'db.php';
 header("Content-Type: application/json");
 
 $query = $conn->prepare(
-    "SELECT * FROM categories"
+    "SELECT 
+    categories.id,
+    categories.category_name,
+    COUNT(products.id) AS product_count
+FROM categories
+LEFT JOIN products 
+ON categories.id = products.category_id
+GROUP BY categories.id, categories.category_name"
 );
 
 $query->execute();

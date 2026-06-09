@@ -9,7 +9,7 @@ body{
     display:flex;
     justify-content:center;
     align-items:center;
-    background: white;
+    background: #6c698d;
     font-family:Arial, Helvetica, sans-serif;
     }
 
@@ -27,12 +27,25 @@ input{
     width:100%;
     padding:10px;
     margin:10px 0;
+    border-radius: 10px;
+    border: 1px solid rgb(129, 129, 129);
+}
+input:focus{
+    border: 1px solid rgb(129, 129, 129);
+    box-shadow: 0px 0px 5px #6c698d;
 }
 
 button{
+    margin: 10px;
+    background-color: #6c698d;
     width:100%;
     padding:10px;
     cursor:pointer;
+    border-radius: 20px;
+    border: none;
+}
+button:hover{
+    background-color: green;
 }
 
     

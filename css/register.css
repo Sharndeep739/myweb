@@ -9,7 +9,7 @@ body{
     justify-content:center;
     align-items:center;
     height:100vh;
-    background:#ffffff;
+    background: #6c698d;
     font-family:Arial, Helvetica, sans-serif;
 }
 
@@ -36,10 +36,16 @@ input::after,:focus{
 
 
 
-    button{
-        width:100%;
-        padding:10px;
-        cursor:pointer;
-    }
-
+button{
+    margin: 10px;
+    background-color: #6c698d;
+    width:100%;
+    padding:10px;
+    cursor:pointer;
+    border: none;
+    border-radius: 20px;
+}
+button:hover{
+    background-color: green;
+}
   

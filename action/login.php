@@ -14,7 +14,7 @@ try{
     $password = $data["password"];
 
     $query = $conn->prepare(
-        "SELECT * FROM users
+        "SELECT * FROM admins
          WHERE email = :email"
     );
 
@@ -23,7 +23,7 @@ try{
     ]);
 
     $user = $query->fetch(PDO::FETCH_ASSOC);
-
+    
     if(!$user){
 
         echo json_encode([

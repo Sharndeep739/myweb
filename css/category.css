@@ -6,12 +6,12 @@
 }
 
 body{
-    background:white;
+    background:#6c698d;
     padding:20px;
 }
 
 .container{
-    max-width:800px;
+    max-width:1000px;
     margin:auto;
 }
 
@@ -29,9 +29,20 @@ input{
 }
 
 button{
-    padding:10px 20px;
+    padding:10px 10px;
     cursor:pointer;
+    background-color: rgb(207, 129, 129);
+    border: none;
+    border-radius: 10px;
 }
+#add-btn{
+    padding:10px 10px;
+    cursor:pointer;
+    background-color: green;
+    border: none;
+    border-radius: 10px;
+}
+
 
 table{
     width:100%;
@@ -39,11 +50,11 @@ table{
 }
 
 th,td{
-    border:1px solid #ddd;
-    padding:10px;
+    border:1px solid rgb(221, 221, 221);
+    padding:20px;
     text-align:left;
 }
 
 th{
-    background:#eee;
+    background:rgb(221, 221, 221);
 }

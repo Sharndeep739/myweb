@@ -13,7 +13,7 @@ try{
 
     //cheker
     $check= $conn->prepare(
-        "select id from users
+        "select id from admins
         where email= :email"
     );
 
@@ -29,7 +29,7 @@ try{
     }
 
     $query = $conn->prepare(
-        "insert into users
+        "insert into admins
         (name,email,password)
         values
         (:name,:email,:password)"
@@ -51,4 +51,4 @@ try{
         "message"=>"Register Unsuccessfully"
     ]);
 }
-
+?>

@@ -1,16 +1,11 @@
 //load ceotgiry
 async function loadCategories(){
 
-    const response = await fetch(
-        "action/get_category.php"
-    );
+    const response = await fetch("action/get_category.php");
 
     const data = await response.json();
 
-    let options =
-    `<option value="">
-        Select Category
-    </option>`;
+    let options =`<option value="">Select Category</option>`;
 
     data.forEach(category => {
 
@@ -22,22 +17,18 @@ async function loadCategories(){
 
     });
 
-    document
-    .getElementById("category_id")
-    .innerHTML = options;
+    document.getElementById("category_id").innerHTML = options;
 }
 
 loadCategories();
 
 // add products
-document
-.getElementById("productForm")
-.addEventListener("submit", async function(event){
+let addPro =document.getElementById("productForm");
+addPro.addEventListener("submit", async function(event){
 
     event.preventDefault();
 
     let category_id = document.getElementById("category_id").value;
-    console.log(category_id);
     let name = document.getElementById("name").value;
     let price =document.getElementById("price").value;
     let stock =document.getElementById("stock").value;
@@ -69,7 +60,10 @@ document
 
         const data =await response.json();
 
-        alert(data.message);
+        if(data.status){
+            window.location.reload();
+            alert(data.message);
+        }
 
     }catch(error){
 

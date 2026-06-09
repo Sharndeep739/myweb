@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if(!isset($_SESSION['user_id'])){
+        header("Location: login.php");
+    }
+    ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,19 +15,21 @@
 </head>
 <body>
     <div class="card">
-
+ 
     <h2>Add Product</h2>
 
     <form id="productForm">
 
         <select id="category_id">
-            <option value="">Select Category</option>
+            
         </select>
 
         <input type="text" id="name"placeholder="Product Name">
         <input type="number" id="price" placeholder="Price">
         <input type="number" id="stock" placeholder="Stock">
         <input type="file" id="image" >
+
+        
 
         <button type="submit">Add Product</button>
 

@@ -1,3 +1,4 @@
+
 *{
     margin:0;
     padding:0;
@@ -52,7 +53,6 @@ body{
     background:#514e69;
 }
 
-
 .main{
     flex:1;
     background:white;
@@ -67,37 +67,56 @@ body{
     justify-content:space-between;
     margin-bottom:20px;
 }
-.topbar h2{
-    margin: 0px 20px 0px 0px ;
-}
-.topbar input{
-    flex: 1;
-    padding: 10px;
-    height: 40px;
-    border-radius: 5px;
-    margin: 0px 100px 0px 100px;
-    border: 1px solid rgb(182, 182, 182);
-}
-.topbar #profile{
-    margin: 0px 20px 0px 20px ;
-    display: flex;
-    font-size: 20px;
-    font-weight: 700;
-    align-items: center;
-}
-#profile #logo{
-    border-radius: 50%;
-    height: 40px;
-    width: 40px;
-    border: 1px solid rgb(182, 182, 182);
-    margin-right: 10px;
+.topbar a{
+    text-decoration: none;
+    color: green;
 }
 
-.overview{
-    border: 1px solid;
-    display: flex;
-    padding: 10px;
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 0 10px rgba(0,0,0,.1);
 }
 
+table th{
+    background:#6c698d;
+    color:white;
+    padding:15px;
+    text-align:left;
+}
 
+table td{
+    padding:15px;
+    border-bottom:1px solid #eee;
+}
 
+table tr:hover{
+    background:#f8fafc;
+}
+
+table img{
+    width:60px;
+    height:60px;
+    object-fit:cover;
+    border-radius:5px;
+}
+
+.action-btn{
+    padding:8px 12px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.edit-btn{
+    background:#22c55e;
+    color:white;
+}
+
+.delete-btn{
+    background:#ef4444;
+    color:white;
+}

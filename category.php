@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    if(!isset($_SESSION['user_id'])){
+        header("Location: login.php");
+    }
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +22,7 @@
         <form id="categoryForm">
 
             <input type="text" id="category_name" placeholder="Category Name">
-            <button type="submit">Add Category</button>
+            <button id="add-btn" type="submit">Add Category</button>
 
         </form>
     </div>
@@ -29,19 +35,14 @@
                 <tr>
                     <th>ID</th>
                     <th>Category Name</th>
+                    <th>Total products</th>
                     <th>Action</th>
                 </tr>
             </thead>
 
             <tbody id="categoryTable">
-
-                <!-- <tr>
-                    <td>1</td>
-                    <td>fdsfsd</td>
-                    <td>
-                        <button>Delete</button>
-                    </td>
-                </tr> -->
+                
+                
             </tbody>
         </table>
 

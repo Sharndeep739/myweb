@@ -3,22 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="css/login.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/register.css">
 </head>
 <body>
 
-<form id="loginForm">
+<form id="registerForm">
+    <h2>Register</h2>
 
-    <h2>Login</h2>
-
+    <input type="text" id="name" placeholder="Name">
     <input type="email" id="email" placeholder="Email">
     <input type="password" id="password" placeholder="Password">
-    <a href="register.html">Resgister</a>
-    <button type="submit">Login</button>
+    <a href="login.php">login</a>
+    <button type="submit">Register</button>
+
+
 
 </form>
-<script src="js/login.js"></script>
 
+
+<script src="js/register.js"></script>
 </body>
 </html>
